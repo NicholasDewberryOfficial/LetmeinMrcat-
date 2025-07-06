@@ -1,0 +1,210 @@
+[gd_scene load_steps=24 format=3 uid="uid://c5hwwt81oah5b"]
+
+[ext_resource type="Script" uid="uid://bpdydwdiimo2f" path="res://createappearanceSDXL.gd" id="1_xkg66"]
+[ext_resource type="Texture2D" uid="uid://ccmo7w3r3ex8u" path="res://art/character.png" id="2_4kpyc"]
+[ext_resource type="Texture2D" uid="uid://cevmapakdx3rd" path="res://sneaky-toast-spritesheet.png" id="2_nworr"]
+
+[sub_resource type="Gradient" id="Gradient_nworr"]
+colors = PackedColorArray(0.00844679, 2.10572e-08, 0.133444, 1, 2.88785e-07, 0.59459, 0.514698, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4kpyc"]
+gradient = SubResource("Gradient_nworr")
+fill_from = Vector2(0.747967, 0.394309)
+fill_to = Vector2(0, 0.947154)
+
+[sub_resource type="Gradient" id="Gradient_4kpyc"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_03vjo"]
+gradient = SubResource("Gradient_4kpyc")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4kpyc"]
+atlas = ExtResource("2_nworr")
+region = Rect2(16, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_03vjo"]
+atlas = ExtResource("2_nworr")
+region = Rect2(32, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f0pap"]
+atlas = ExtResource("2_nworr")
+region = Rect2(48, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hhho1"]
+atlas = ExtResource("2_nworr")
+region = Rect2(64, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fn3yx"]
+atlas = ExtResource("2_nworr")
+region = Rect2(80, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_81lrc"]
+atlas = ExtResource("2_nworr")
+region = Rect2(96, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ncxgg"]
+atlas = ExtResource("2_nworr")
+region = Rect2(112, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wr2mw"]
+atlas = ExtResource("2_nworr")
+region = Rect2(128, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_we4c6"]
+atlas = ExtResource("2_nworr")
+region = Rect2(144, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jh4wm"]
+atlas = ExtResource("2_nworr")
+region = Rect2(160, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3w1te"]
+atlas = ExtResource("2_nworr")
+region = Rect2(176, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g77oe"]
+atlas = ExtResource("2_nworr")
+region = Rect2(192, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3nylp"]
+atlas = ExtResource("2_nworr")
+region = Rect2(208, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xtxsb"]
+atlas = ExtResource("2_nworr")
+region = Rect2(224, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pbss8"]
+atlas = ExtResource("2_nworr")
+region = Rect2(240, 80, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xkg66"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4kpyc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_03vjo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f0pap")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hhho1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fn3yx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_81lrc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ncxgg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wr2mw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_we4c6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jh4wm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3w1te")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g77oe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3nylp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xtxsb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pbss8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Createappearance" type="Node2D"]
+script = ExtResource("1_xkg66")
+bgcharacter = ExtResource("2_4kpyc")
+
+[node name="bluegreenb" type="TextureRect" parent="."]
+offset_right = 1153.0
+offset_bottom = 646.0
+texture = SubResource("GradientTexture2D_4kpyc")
+
+[node name="userinput" type="TextEdit" parent="."]
+offset_left = 2.0
+offset_top = 426.0
+offset_right = 576.0
+offset_bottom = 646.0
+text = "close up face photo of a black man  wearing a cowboy outfit in a photoshoot with a blue background"
+placeholder_text = "closeup face photo of caucasian man in black clothes, night city street, bokeh"
+wrap_mode = 1
+
+[node name="guide" type="RichTextLabel" parent="."]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 388.0
+offset_bottom = 415.0
+scale = Vector2(1.00539, 1)
+theme_override_font_sizes/normal_font_size = 15
+text = "Describe your appearance!
+
+-Use under 30 words.  This model (RealisticDream) is fast, and decently high quality - but can't take in long inputs.
+
+-Don't be afraid to generate multiple times!
+
+-Facial closeups are better than body photos. The picture will be scaled downwards.
+
+-To test, change a few things at a time. Be iterative."
+
+[node name="generatebutton" type="Button" parent="."]
+offset_left = 582.0
+offset_top = 529.0
+offset_right = 747.0
+offset_bottom = 639.0
+text = "GENERATE"
+
+[node name="imagefromuser" type="TextureRect" parent="."]
+offset_left = 579.0
+offset_top = -2.0
+offset_right = 1017.0
+offset_bottom = 412.0
+texture = SubResource("GradientTexture1D_03vjo")
+expand_mode = 5
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+use_threads = true
+
+[node name="toastsprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(843, 573)
+scale = Vector2(9.5, 8.375)
+sprite_frames = SubResource("SpriteFrames_xkg66")
+frame_progress = 0.584133
+speed_scale = 3.0
+
+[node name="MoveOn" type="Button" parent="."]
+offset_left = 957.0
+offset_top = 441.0
+offset_right = 1072.0
+offset_bottom = 638.0
+text = "Move On!"
+
+[node name="anonymouspicture" type="Button" parent="."]
+offset_left = 3.0
+offset_top = 343.0
+offset_right = 258.0
+offset_bottom = 374.0
+text = "Use Anonymous picture instead of AI one"
+
+[connection signal="pressed" from="generatebutton" to="." method="_on_generatebutton_pressed"]
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_http_request_request_completed"]
+[connection signal="pressed" from="MoveOn" to="." method="_on_move_on_pressed"]
+[connection signal="pressed" from="anonymouspicture" to="." method="_on_anonymouspicture_pressed"]

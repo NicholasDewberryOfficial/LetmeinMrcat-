@@ -1,0 +1,107 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnpy23fsslx2h"]
+
+[ext_resource type="Script" uid="uid://b30m73vgpb1br" path="res://check_ai.gd" id="1_iaupx"]
+[ext_resource type="Texture2D" uid="uid://cpsf2e17mkn5n" path="res://icon.svg" id="2_ll3vd"]
+
+[node name="CheckAi" type="Node2D"]
+script = ExtResource("1_iaupx")
+
+[node name="regimg" type="Node" parent="."]
+
+[node name="checkIMG" type="HTTPRequest" parent="regimg"]
+
+[node name="checkimgconnectino" type="Button" parent="regimg"]
+offset_left = 72.0
+offset_top = 261.0
+offset_right = 250.0
+offset_bottom = 317.0
+text = "Check img connection"
+
+[node name="imgcolor" type="TextureRect" parent="regimg"]
+offset_left = 69.0
+offset_top = 16.0
+offset_right = 235.0
+offset_bottom = 17.0
+scale = Vector2(1, 209.5)
+texture = ExtResource("2_ll3vd")
+expand_mode = 2
+
+[node name="imgconstatus" type="Label" parent="regimg"]
+offset_left = 292.0
+offset_top = 5.0
+offset_right = 405.0
+offset_bottom = 89.0
+text = "Connection -
+?"
+
+[node name="regtxt" type="Node" parent="."]
+
+[node name="checkTXT" type="HTTPRequest" parent="regtxt"]
+
+[node name="chectxtconnection" type="Button" parent="regtxt"]
+offset_left = 747.0
+offset_top = 274.0
+offset_right = 925.0
+offset_bottom = 330.0
+text = "Check text connection"
+
+[node name="txtcolor" type="TextureRect" parent="regtxt"]
+offset_left = 744.0
+offset_top = 29.0
+offset_right = 910.0
+offset_bottom = 30.0
+scale = Vector2(1, 209.5)
+texture = ExtResource("2_ll3vd")
+expand_mode = 2
+
+[node name="txtconstatus" type="Label" parent="regtxt"]
+offset_left = 967.0
+offset_top = 18.0
+offset_right = 1080.0
+offset_bottom = 102.0
+text = "Connection -
+?"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 10.0
+offset_top = 367.0
+offset_right = 232.0
+offset_bottom = 621.0
+text = "Both of these SHOULD be connected and working.
+
+If not, you have a problem withy our game and need to fix them. Refer to my technical guide. "
+
+[node name="backtomainmenu" type="Button" parent="."]
+offset_left = 423.0
+offset_top = 414.0
+offset_right = 988.0
+offset_bottom = 622.0
+text = "All good?
+
+Back to the main menu. "
+
+[node name="Label" type="Label" parent="."]
+offset_left = 266.0
+offset_top = 98.0
+offset_right = 375.0
+offset_bottom = 261.0
+text = "Make sure Automatic111
+Is running with --api flag
+
+We check for port 7860"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 939.0
+offset_top = 109.0
+offset_right = 1132.0
+offset_bottom = 272.0
+text = "Make sure Ollama is 
+running.
+
+We use gemma3:4b"
+
+[connection signal="request_completed" from="regimg/checkIMG" to="." method="_on_check_img_request_completed"]
+[connection signal="pressed" from="regimg/checkimgconnectino" to="." method="_on_checkimgconnectino_pressed"]
+[connection signal="request_completed" from="regtxt/checkTXT" to="." method="_on_check_txt_request_completed"]
+[connection signal="pressed" from="regtxt/chectxtconnection" to="." method="_on_chectxtconnection_pressed"]
+[connection signal="pressed" from="backtomainmenu" to="." method="_on_backtomainmenu_pressed"]

@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cu2h7lrg2lc6s"]
+
+[node name="Youwin" type="Node2D"]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 174.0
+offset_top = 43.0
+offset_right = 631.0
+offset_bottom = 202.0
+text = "Congrats! You win. 
+
+You find the treasure, and get a lot of money. Yay! 
+
+(you can leave now)"

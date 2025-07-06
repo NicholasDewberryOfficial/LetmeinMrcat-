@@ -1,0 +1,75 @@
+[gd_scene load_steps=4 format=3 uid="uid://uivkic6xp6xp"]
+
+[ext_resource type="Texture2D" uid="uid://h2318qkh53rx" path="res://art/BlackWhite_S.jpg" id="1_66l6e"]
+[ext_resource type="Texture2D" uid="uid://dp76x8o2v1h00" path="res://art/wizard-face.png" id="2_v48gp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v48gp"]
+bg_color = Color(0.29192, 0.0161707, 0, 1)
+
+[node name="LookgoodDialogue" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+self_modulate = Color(0, 0.38278, 0.38278, 1)
+offset_right = 1154.0
+offset_bottom = 647.0
+texture = ExtResource("1_66l6e")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+modulate = Color(1, 1, 0, 1)
+offset_left = 833.0
+offset_top = 450.0
+offset_right = 1024.0
+offset_bottom = 624.0
+texture = ExtResource("2_v48gp")
+expand_mode = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+offset_left = 11.0
+offset_right = 816.0
+offset_bottom = 650.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "You stumble into a clearing and nearly trip over a stout little dwarf snoring beside a sputtering campfire, his beard tangled around a half-eaten sausage. He jerks awake with a snort, blinking blearily before announcing, “You’re late—I’ve been expecting absolutely no one, so congratulations!” As he wrestles a squirrel for the last biscuit, you begin to suspect this may not be an ordinary forest hermit.
+"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 2
+theme_override_colors/font_outline_color = Color(1.44392e-06, 0.604985, 0.204187, 1)
+theme_override_constants/outline_size = 1
+bbcode_enabled = true
+text = "I smile as I walk near him. Thankfully Gnomes and Dwarves have gotten along for centuries in Elyria - and he seems pretty harmless. I approach with my hand off my sword, and with open arms.
+
+Once I'm around 10 feet away, I [b] Pull out my guild request papers [/b] about the strange dwarf in the forest eating food and harrassing travelers. \"This you? Or is this just you when you're hungry?\" I ask him in a joking manner - something that jovial Dwarves should enjoy."
+selection_enabled = true
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_v48gp")
+text = "CHR DC: 10. Roll = 5+1 = 6."
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Your attempt at humor fails - and fails spectacularly. All traces of his happy manner is gone, and he eats the sausage from his beard quickly. He scowls as he looks upon his visage in the papers, and as you speak to him. \"Why I oughta... I'll tell you what.\"
+
+He mutters under his breath, adjusting the hems of his pajamas. A second later - he rushes to his axe!
+
+\"Your money or your life Gnome! Which will it be?\""
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 918.0
+offset_right = 1150.0
+offset_bottom = 143.0
+text = "Suggested Response Tokens left: 2850 
+
+Meeting history: None"

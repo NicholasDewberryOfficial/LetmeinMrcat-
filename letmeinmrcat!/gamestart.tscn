@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1ffjf0bf16dt"]
+
+[ext_resource type="Script" uid="uid://dcns8f3jcplei" path="res://gamestart.gd" id="1_72hqy"]
+
+[sub_resource type="Gradient" id="Gradient_hlbna"]
+colors = PackedColorArray(0.00844679, 2.10572e-08, 0.133444, 1, 2.88785e-07, 0.59459, 0.514698, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_hlbna"]
+gradient = SubResource("Gradient_hlbna")
+fill_from = Vector2(0.747967, 0.394309)
+fill_to = Vector2(0, 0.947154)
+
+[node name="Gamestart" type="Node2D"]
+script = ExtResource("1_72hqy")
+
+[node name="bluegreenb" type="TextureRect" parent="."]
+offset_right = 1153.0
+offset_bottom = 646.0
+texture = SubResource("GradientTexture2D_hlbna")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_right = 836.0
+offset_bottom = 510.0
+text = "Hidden deep in the jungle of North Carolina lies the ancient temple of Qeemoaokvmaoifmaioemrqiiomf Fom1oiqnrfiuoewndiup[zonpnq..... For years, legends haved been told of its riches, secrets, and wish granting properies. He who finds the hidden treasure of QEEEMO will spend the rest of their lives in peace and wealth. For this reason, millions of people have been exploring every inch of the forest, looking through caves and under rocks to find its secretive entrance.
+
+Just like the Californian gold rush, everyone's trying to strike it rich. You are not one of these people.
+
+You're an ordinary joe, minding your own business. However, one day - you find yourself teleported to this location.
+
+You stand outside the doors to the outer sanctum. You take a deep breath, ready to take on the temple.  
+
+But before you enter, there's a couple things you need to do..."
+
+[node name="Next" type="Button" parent="."]
+offset_left = 510.0
+offset_top = 402.0
+offset_right = 1012.0
+offset_bottom = 596.0
+text = "NEXT"
+
+[connection signal="pressed" from="Next" to="." method="_on_next_pressed"]

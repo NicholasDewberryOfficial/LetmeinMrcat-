@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=3 uid="uid://c0tt2d0a46ahn"]
+
+[ext_resource type="Texture2D" uid="uid://k2m6gt68odv3" path="res://art/letmeinletmeinn.jpg" id="1_cmhrf"]
+[ext_resource type="Script" uid="uid://4wqbp2gw1o3d" path="res://mainmenu.gd" id="1_d2nv2"]
+
+[sub_resource type="Gradient" id="Gradient_nworr"]
+colors = PackedColorArray(0.00844679, 2.10572e-08, 0.133444, 1, 2.88785e-07, 0.59459, 0.514698, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_cmhrf"]
+gradient = SubResource("Gradient_nworr")
+fill_from = Vector2(0.747967, 0.394309)
+fill_to = Vector2(0, 0.947154)
+
+[node name="Mainmenu" type="Node2D"]
+script = ExtResource("1_d2nv2")
+
+[node name="bluegreenb" type="TextureRect" parent="."]
+offset_right = 1153.0
+offset_bottom = 646.0
+texture = SubResource("GradientTexture2D_cmhrf")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 604.0
+offset_top = 5.0
+offset_right = 853.0
+offset_bottom = 153.0
+text = "Let me in... LET ME INNN!!"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 399.0
+offset_bottom = 642.0
+texture = ExtResource("1_cmhrf")
+expand_mode = 4
+
+[node name="checkaiint" type="Button" parent="."]
+offset_left = 500.0
+offset_top = 60.0
+offset_right = 891.0
+offset_bottom = 158.0
+text = "PRESS THIS FIRST!
+Check AI integration tools"
+
+[node name="startgame" type="Button" parent="."]
+offset_left = 537.0
+offset_top = 291.0
+offset_right = 878.0
+offset_bottom = 373.0
+text = "Start game
+(No saving btw)"
+
+[connection signal="pressed" from="checkaiint" to="." method="_on_checkaiint_pressed"]
+[connection signal="pressed" from="startgame" to="." method="_on_startgame_pressed"]

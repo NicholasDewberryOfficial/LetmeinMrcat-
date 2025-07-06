@@ -1,0 +1,201 @@
+[gd_scene load_steps=22 format=3 uid="uid://ba2hlb4n20xuc"]
+
+[ext_resource type="Script" uid="uid://c4krrd67xph5w" path="res://art/cattalk/cattalk.gd" id="1_28ypq"]
+[ext_resource type="Texture2D" uid="uid://h2318qkh53rx" path="res://art/BlackWhite_S.jpg" id="2_53lkk"]
+[ext_resource type="Texture2D" uid="uid://ccmo7w3r3ex8u" path="res://art/character.png" id="3_ulqmh"]
+[ext_resource type="Texture2D" uid="uid://c8ysu8pxuu0gb" path="res://art/catstaresback.jpg" id="4_o5il8"]
+[ext_resource type="Texture2D" uid="uid://cevmapakdx3rd" path="res://sneaky-toast-spritesheet.png" id="5_wwieo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4kpyc"]
+atlas = ExtResource("5_wwieo")
+region = Rect2(16, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_03vjo"]
+atlas = ExtResource("5_wwieo")
+region = Rect2(32, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f0pap"]
+atlas = ExtResource("5_wwieo")
+region = Rect2(48, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hhho1"]
+atlas = ExtResource("5_wwieo")
+region = Rect2(64, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fn3yx"]
+atlas = ExtResource("5_wwieo")
+region = Rect2(80, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_81lrc"]
+atlas = ExtResource("5_wwieo")
+region = Rect2(96, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ncxgg"]
+atlas = ExtResource("5_wwieo")
+region = Rect2(112, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wr2mw"]
+atlas = ExtResource("5_wwieo")
+region = Rect2(128, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_we4c6"]
+atlas = ExtResource("5_wwieo")
+region = Rect2(144, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jh4wm"]
+atlas = ExtResource("5_wwieo")
+region = Rect2(160, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3w1te"]
+atlas = ExtResource("5_wwieo")
+region = Rect2(176, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g77oe"]
+atlas = ExtResource("5_wwieo")
+region = Rect2(192, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3nylp"]
+atlas = ExtResource("5_wwieo")
+region = Rect2(208, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xtxsb"]
+atlas = ExtResource("5_wwieo")
+region = Rect2(224, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pbss8"]
+atlas = ExtResource("5_wwieo")
+region = Rect2(240, 80, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7yys8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4kpyc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_03vjo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f0pap")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hhho1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fn3yx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_81lrc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ncxgg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wr2mw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_we4c6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jh4wm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3w1te")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g77oe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3nylp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xtxsb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pbss8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Cattalk" type="Node2D"]
+script = ExtResource("1_28ypq")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+self_modulate = Color(0.407056, 0.407056, 0.407056, 1)
+offset_right = 1150.0
+offset_bottom = 647.0
+texture = ExtResource("2_53lkk")
+expand_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+timeout = 15.0
+
+[node name="usertextresponse" type="TextEdit" parent="."]
+offset_left = 427.0
+offset_top = 421.0
+offset_right = 902.0
+offset_bottom = 645.0
+placeholder_text = "Placeholder. Type to replace me."
+metadata/_edit_use_anchors_ = true
+
+[node name="userresponsesleft" type="Label" parent="."]
+offset_left = 439.0
+offset_top = 340.0
+offset_right = 806.0
+offset_bottom = 418.0
+text = "Type here to respond. Responses left:"
+metadata/_edit_use_anchors_ = true
+
+[node name="usertexture" type="TextureRect" parent="."]
+offset_left = 10.0
+offset_top = 339.0
+offset_right = 312.0
+offset_bottom = 644.0
+texture = ExtResource("3_ulqmh")
+expand_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="catpicture" type="TextureRect" parent="."]
+offset_right = 350.0
+offset_bottom = 229.0
+texture = ExtResource("4_o5il8")
+expand_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="catresponse" type="RichTextLabel" parent="."]
+offset_left = 378.0
+offset_top = 11.0
+offset_right = 983.0
+offset_bottom = 300.0
+bbcode_enabled = true
+text = "*The cat awakens as you approach, ready to speak with you.*"
+metadata/_edit_use_anchors_ = true
+
+[node name="gonext" type="Button" parent="."]
+offset_left = 971.0
+offset_top = 4.0
+offset_right = 1143.0
+offset_bottom = 117.0
+text = "END CHAT"
+metadata/_edit_use_anchors_ = true
+
+[node name="sendresponse" type="Button" parent="."]
+offset_left = 939.0
+offset_top = 476.0
+offset_right = 1139.0
+offset_bottom = 627.0
+text = "Send response"
+metadata/_edit_use_anchors_ = true
+
+[node name="toastsprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(177, 285)
+scale = Vector2(5.375, 5.0625)
+sprite_frames = SubResource("SpriteFrames_7yys8")
+speed_scale = 3.0
+
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_http_request_request_completed"]
+[connection signal="pressed" from="gonext" to="." method="_on_gonext_pressed"]
+[connection signal="pressed" from="sendresponse" to="." method="_on_sendresponse_pressed"]

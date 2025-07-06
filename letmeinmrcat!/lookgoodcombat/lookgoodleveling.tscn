@@ -1,0 +1,74 @@
+[gd_scene load_steps=4 format=3 uid="uid://xcxhqt0og7gd"]
+
+[ext_resource type="Texture2D" uid="uid://h2318qkh53rx" path="res://art/BlackWhite_S.jpg" id="1_0ctmn"]
+[ext_resource type="Texture2D" uid="uid://dp76x8o2v1h00" path="res://art/wizard-face.png" id="2_1k2uk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1k2uk"]
+bg_color = Color(0, 0.262969, 0.39254, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.923038, 0.83694, 0.56969, 1)
+
+[node name="Lookgoodleveling" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.265636, 0.236589, 0.0411922, 1)
+offset_right = 1151.0
+offset_bottom = 649.0
+texture = ExtResource("1_0ctmn")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+modulate = Color(1, 1, 0, 1)
+offset_left = 843.0
+offset_top = 454.0
+offset_right = 1034.0
+offset_bottom = 628.0
+texture = ExtResource("2_1k2uk")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 10.0
+offset_top = 4.0
+offset_right = 605.0
+offset_bottom = 645.0
+text = "Tippis Whimsissan
+-Gnome 
+-Wizard
+-Swordsman
+
+Level: 21
+
+Appearance:
+You catch your reflection in the cracked mirror—short, wrinkled, and stubbornly unbowed by time. Your silver beard hangs in tangled braids, each charm a memory, each burn mark a lesson hard-won. The sword at your side and the staff on your back feel heavier than they once did, but the glint in your eyes tells you there’s still plenty of fight left.
+
+STATS: 
+
+STR: +2
+DEX: +3
+CON: +1
+WIS: +3
+INT: +2
+CHR: +1
+
+BACKSTORY:
+You never meant to become an adventurer—it just sort of happened after that basilisk ate your garden and you chased it across three kingdoms. One spell led to another, one duel turned into a dozen, and before long, folks were calling you “hero” instead of “hey, you.” Now, with a battered map, a stiff back, and more enchanted gear than sense, you roam the world not for glory, but because retirement sounds boring.
+"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 759.0
+offset_top = 34.0
+offset_right = 994.0
+offset_bottom = 236.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_1k2uk")
+text = "Level Up?
+1200/1000"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 845.0
+offset_top = 369.0
+offset_right = 1044.0
+offset_bottom = 445.0
+text = "Continue"

@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bg4xpa2f8rp4r"]
+
+[ext_resource type="Texture2D" uid="uid://bulbbjhpyfadb" path="res://art/insidedungeon.png" id="1_bj448"]
+
+[node name="Combatscene" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1154.0
+offset_bottom = 651.0
+texture = ExtResource("1_bj448")
+expand_mode = 2

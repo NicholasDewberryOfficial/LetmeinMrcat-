@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctwe4kko5ia3l"]
+
+[ext_resource type="Script" uid="uid://br8g8kgjlvhha" path="res://gamescenes/baseinteractionscript.gd" id="1_m1o1n"]
+
+[node name="Catenterance" type="Node2D"]
+script = ExtResource("1_m1o1n")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1151.0
+offset_bottom = 650.0
+
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_http_request_request_completed"]

@@ -1,0 +1,150 @@
+[gd_scene load_steps=5 format=3 uid="uid://0j7c4b3xmsip"]
+
+[ext_resource type="Texture2D" uid="uid://h2318qkh53rx" path="res://art/BlackWhite_S.jpg" id="1_4n4qu"]
+[ext_resource type="Texture2D" uid="uid://dhibwai5aii8w" path="res://art/minotaur.png" id="2_d8kyd"]
+[ext_resource type="Texture2D" uid="uid://dp76x8o2v1h00" path="res://art/wizard-face.png" id="3_4xwmh"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_4n4qu"]
+blend_mode = 4
+
+[node name="Lookgoodcombat" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+self_modulate = Color(0.365166, 0.0583784, 0.123417, 1)
+material = SubResource("CanvasItemMaterial_4n4qu")
+offset_right = 1153.0
+offset_bottom = 652.0
+texture = ExtResource("1_4n4qu")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 117.0
+offset_top = 31.0
+offset_right = 305.0
+offset_bottom = 216.0
+bbcode_enabled = true
+text = "Minotaur:
+Level: 20
+Weak: ??
+Strong: ?? 
+Health: [color=orange]Pained [/color]
+Status: Burning"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = -1.0
+offset_top = 314.0
+offset_right = 478.0
+offset_bottom = 646.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="blood bolt" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Blood Bolt
+(10%)"
+
+[node name="blood bolt2" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Fire Blast
+(90%)"
+
+[node name="blood bolt3" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Floor Grease
+(100%)"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="blood bolt" type="Button" parent="VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Sword Slash!"
+
+[node name="blood bolt2" type="Button" parent="VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Parry!
+(20%)"
+
+[node name="blood bolt3" type="Button" parent="VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Zoning Stance
+(100%)
+Next: Dueling stance)"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="blood bolt" type="Button" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Run
+(0%)"
+
+[node name="blood bolt2" type="Button" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Guard
+(100%)"
+
+[node name="blood bolt3" type="Button" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Use Item"
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+modulate = Color(1, 0, 0.027451, 1)
+offset_left = 316.0
+offset_top = 3.0
+offset_right = 589.0
+offset_bottom = 279.0
+texture = ExtResource("2_d8kyd")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+modulate = Color(1, 1, 0, 1)
+offset_left = 833.0
+offset_top = 450.0
+offset_right = 1024.0
+offset_bottom = 624.0
+texture = ExtResource("3_4xwmh")
+expand_mode = 1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+offset_left = 718.0
+offset_top = 440.0
+offset_right = 934.0
+offset_bottom = 648.0
+text = "You:
+HP:  27
+MP: 60
+Fizzle% = 10%
+AP: 3/10"
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="."]
+offset_left = 638.0
+offset_top = 4.0
+offset_right = 1101.0
+offset_bottom = 294.0
+text = "You get the drop on your foe! Go first!
+
+Minotaur takes 10 damage from your fire blast!
+Minotaur burns from fireblast!
+Minotaur slams you for 20 damage! Critical hit!"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 508.0
+offset_top = 401.0
+offset_right = 635.0
+offset_bottom = 510.0
+text = "END
+TURN"

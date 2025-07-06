@@ -1,0 +1,66 @@
+[gd_scene load_steps=4 format=3 uid="uid://eh35dnfqp62e"]
+
+[ext_resource type="Script" uid="uid://3462cqyvt8tx" path="res://gamescenes/mainlobby.gd" id="1_pr0oq"]
+[ext_resource type="Script" uid="uid://cl630peyqutyn" path="res://gamescenes/toplabels.gd" id="2_xr0mk"]
+[ext_resource type="Texture2D" uid="uid://di0rhot2lh46r" path="res://art/mainlobby.png" id="3_s2q00"]
+
+[node name="Mainlobby" type="Node2D"]
+script = ExtResource("1_pr0oq")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1153.0
+offset_bottom = 651.0
+texture = ExtResource("3_s2q00")
+expand_mode = 2
+
+[node name="speaktocat" type="Button" parent="."]
+offset_left = 500.0
+offset_top = 303.0
+offset_right = 633.0
+offset_bottom = 357.0
+text = "Speak to the cat
+(Dialogue)"
+
+[node name="Explore" type="Button" parent="."]
+offset_left = 36.0
+offset_top = 156.0
+offset_right = 178.0
+offset_bottom = 240.0
+disabled = true
+text = "The left chamber is
+covered in rocks and is 
+inaccessible."
+
+[node name="puzzles" type="Button" parent="."]
+offset_left = 927.0
+offset_top = 269.0
+offset_right = 1069.0
+offset_bottom = 353.0
+text = "Solve mysteries
+(Puzzles)"
+
+[node name="toplabels" type="HBoxContainer" parent="."]
+visible = false
+offset_right = 945.0
+offset_bottom = 53.0
+script = ExtResource("2_xr0mk")
+
+[node name="hplabel" type="RichTextLabel" parent="toplabels"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "HP:"
+
+[node name="goldlabel" type="RichTextLabel" parent="toplabels"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Gold:"
+
+[node name="cantalklabel" type="RichTextLabel" parent="toplabels"]
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "[b] Can talk to guardian [/b]"
+
+[connection signal="pressed" from="speaktocat" to="." method="_on_speaktocat_pressed"]
+[connection signal="pressed" from="Explore" to="." method="_on_explore_pressed"]
+[connection signal="pressed" from="puzzles" to="." method="_on_puzzles_pressed"]
